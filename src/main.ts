@@ -250,7 +250,7 @@ app.innerHTML = `
 
     <div style="text-align: center; margin-top: 3rem; color: var(--text-secondary);">
       <p style="font-size: 1.15rem; max-width: 850px; margin: 0 auto; line-height: 1.8;">
-        <strong style="color: var(--accent-green);">Zero blockchain calls needed.</strong> 
+        <strong style="color: var(--accent-cyan);">Zero blockchain calls needed.</strong> 
         All verification happens off-chain in milliseconds. Challenges self-expire after 60 seconds. 
         Every nonce can only be used once. Pure HTTP semantics—works with curl, fetch, axios, or any HTTP client.
       </p>
