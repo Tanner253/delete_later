@@ -121,7 +121,9 @@ html {
   background: linear-gradient(135deg, var(--accent-purple), var(--accent-cyan));
 }
 
-.github-link {
+.github-link,
+.pumpfun-link,
+.x-link {
   color: var(--text-primary);
   text-decoration: none;
   display: flex;
@@ -135,14 +137,30 @@ html {
   border: 1px solid var(--border-color);
 }
 
-.github-link:hover {
+.github-link:hover,
+.pumpfun-link:hover,
+.x-link:hover {
   color: var(--accent-purple);
   border-color: var(--accent-purple);
   background: rgba(153, 69, 255, 0.08);
   transform: translateY(-2px);
 }
 
-.github-link svg {
+.pumpfun-link:hover {
+  color: var(--accent-cyan);
+  border-color: var(--accent-cyan);
+  background: rgba(0, 212, 255, 0.08);
+}
+
+.x-link:hover {
+  color: var(--text-primary);
+  border-color: var(--text-primary);
+  background: rgba(26, 26, 26, 0.05);
+}
+
+.github-link svg,
+.pumpfun-link svg,
+.x-link svg {
   width: 20px;
   height: 20px;
 }
@@ -654,11 +672,122 @@ html {
   box-shadow: 0 8px 20px var(--glow-purple);
 }
 
+/* Sticky CA Footer */
+.sticky-ca-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+  padding: 1rem 2rem;
+  z-index: 999;
+  box-shadow: 0 -4px 20px rgba(153, 69, 255, 0.3);
+  backdrop-filter: blur(10px);
+  animation: slideUp 0.5s ease;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.ca-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.ca-label {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.95rem;
+  white-space: nowrap;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.ca-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex: 1;
+  min-width: 0;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.ca-address {
+  color: #ffffff;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.9rem;
+  font-weight: 500;
+  flex: 1;
+  overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+}
+
+.ca-address::-webkit-scrollbar {
+  height: 4px;
+}
+
+.ca-address::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.ca-address::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+}
+
+.ca-copy-btn {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  white-space: nowrap;
+}
+
+.ca-copy-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: scale(1.05);
+}
+
+.ca-copy-btn.copied {
+  background: rgba(20, 241, 149, 0.3);
+  border-color: var(--accent-blue);
+}
+
+.ca-copy-btn svg {
+  flex-shrink: 0;
+}
+
 /* Footer */
 .footer {
   background: var(--bg-card);
   border-top: 1px solid var(--border-color);
-  padding: 3rem 2rem;
+  padding: 3rem 2rem 5rem;
   text-align: center;
 }
 
@@ -696,16 +825,20 @@ html {
     height: 40px;
   }
 
-  .nav a:not(.github-link) {
+  .nav a:not(.github-link):not(.pumpfun-link):not(.x-link) {
     display: none;
   }
 
-  .github-link {
+  .github-link,
+  .pumpfun-link,
+  .x-link {
     width: 36px;
     height: 36px;
   }
 
-  .github-link svg {
+  .github-link svg,
+  .pumpfun-link svg,
+  .x-link svg {
     width: 18px;
     height: 18px;
   }
@@ -771,6 +904,43 @@ html {
   .cta-buttons .btn-secondary {
     width: 100%;
     text-align: center;
+  }
+
+  .sticky-ca-footer {
+    padding: 0.75rem 1rem;
+  }
+
+  .ca-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+
+  .ca-label {
+    font-size: 0.8rem;
+    text-align: center;
+  }
+
+  .ca-content {
+    padding: 0.5rem 0.75rem;
+    gap: 0.5rem;
+  }
+
+  .ca-address {
+    font-size: 0.75rem;
+  }
+
+  .ca-copy-btn {
+    padding: 0.4rem 0.75rem;
+    font-size: 0.75rem;
+  }
+
+  .ca-copy-text {
+    display: none;
+  }
+
+  .footer {
+    padding: 3rem 2rem 6rem;
   }
 }
 
