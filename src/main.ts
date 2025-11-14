@@ -6,7 +6,9 @@ app.innerHTML = `
   <!-- Header -->
   <header class="header">
     <div class="header-content">
-      <div class="logo">WebX403</div>
+      <div class="logo">
+        <img src="/logo.jpg" alt="WebX403" class="logo-img" />
+      </div>
       <nav class="nav">
         <a href="#why">Why</a>
         <a href="#features">Features</a>
