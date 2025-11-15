@@ -240,8 +240,8 @@ html {
 }
 
 .install-command {
-  background: var(--bg-card);
-  border: 1px solid var(--border-color);
+  background: #1a1a1a;
+  border: 1px solid #2a2a2a;
   padding: 1rem 1.5rem;
   border-radius: 8px;
   font-family: 'JetBrains Mono', monospace;
@@ -250,7 +250,8 @@ html {
   align-items: center;
   gap: 1rem;
   cursor: pointer;
-  transition: border-color 0.3s ease;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .install-command:hover {
@@ -259,7 +260,7 @@ html {
 }
 
 .install-command code {
-  color: var(--accent-purple);
+  color: var(--accent-cyan);
 }
 
 .copy-btn {

@@ -7,7 +7,7 @@ app.innerHTML = `
   <header class="header">
     <div class="header-content">
       <div class="logo">
-        <img src="/logo.jpg" alt="WebX403" class="logo-img" />
+        <img src="/web_long_logo.png" alt="WebX403" class="logo-img" />
       </div>
       <nav class="nav">
         <a href="#why">Why</a>
