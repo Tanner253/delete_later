@@ -20,7 +20,7 @@ app.innerHTML = `
             <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
           </svg>
         </a>
-        <a href="#" target="_blank" class="pumpfun-link" title="View on Pump.fun" id="pumpfun-link">
+        <a href="https://pump.fun/coin/HQAByYMAgDgimjmAiADvHn1XSex2LUNeNxypva7wpump" target="_blank" class="pumpfun-link" title="View on Pump.fun" id="pumpfun-link">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
             <rect x="4" y="7" width="16" height="10" rx="5" ry="5" transform="rotate(-25 12 12)"/>
           </svg>
@@ -541,7 +541,7 @@ response = client.<span class="function">authenticate</span>(
     <div class="ca-container">
       <div class="ca-label">Contract Address:</div>
       <div class="ca-content">
-        <code class="ca-address" id="ca-address">pump.fun ca coming soon</code>
+        <code class="ca-address" id="ca-address">HQAByYMAgDgimjmAiADvHn1XSex2LUNeNxypva7wpump</code>
         <button class="ca-copy-btn" id="ca-copy-btn" title="Copy Contract Address">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
